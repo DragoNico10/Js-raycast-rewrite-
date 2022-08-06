@@ -10,6 +10,7 @@ var RES=8
 var DV, DELTA=1
 var drawDist=[], drawType=[], drawX=[], Draw_IDX
 var player=new Player()
+var scribble=new Scribble()
 var preload=()=>{
   player.preloadCostumes()
 }
@@ -38,7 +39,7 @@ function draw() {
   background(0)
   player.run()
   particle.update()
-  //particle.show()
+  particle.show()
   particle.look(walls)
   
   for (let wall of walls) {

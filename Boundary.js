@@ -5,7 +5,11 @@ class Boundary {
     }
     
     show() {
-      stroke(255)
-      line(this.a.x, this.a.y, this.b.x, this.b.y)
+      push()
+      colorMode(HSB)
+      stroke(127, 80, 200)
+      strokeWeight(2)
+      scribble.scribbleLine(this.a.x, this.a.y, this.b.x, this.b.y)
+      pop()
     }
   }
